@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00307441A0EB13C0049E621 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00307431A0EB13C0049E621 /* CustomTableViewCell.xib */; };
 		D07D19E31A0E7A76006B36CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07D19E21A0E7A76006B36CC /* AppDelegate.swift */; };
 		D07D19E51A0E7A76006B36CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07D19E41A0E7A76006B36CC /* ViewController.swift */; };
 		D07D19E81A0E7A76006B36CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07D19E61A0E7A76006B36CC /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D00307431A0EB13C0049E621 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		D07D19DD1A0E7A76006B36CC /* ezTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ezTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07D19E11A0E7A76006B36CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D07D19E21A0E7A76006B36CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				D07D19E91A0E7A76006B36CC /* Images.xcassets */,
 				D07D19EB1A0E7A76006B36CC /* LaunchScreen.xib */,
 				D07D19E01A0E7A76006B36CC /* Supporting Files */,
+				D00307431A0EB13C0049E621 /* CustomTableViewCell.xib */,
 			);
 			path = ezTouch;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			files = (
 				D07D19E81A0E7A76006B36CC /* Main.storyboard in Resources */,
 				D07D19ED1A0E7A76006B36CC /* LaunchScreen.xib in Resources */,
+				D00307441A0EB13C0049E621 /* CustomTableViewCell.xib in Resources */,
 				D07D19EA1A0E7A76006B36CC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +409,7 @@
 				D07D19FE1A0E7A76006B36CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D07D19FF1A0E7A76006B36CC /* Build configuration list for PBXNativeTarget "ezTouchTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				D07D1A011A0E7A76006B36CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

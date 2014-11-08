@@ -44,7 +44,7 @@
         <!--View Controller-->
         <scene sceneID="BfS-rO-jWl">
             <objects>
-                <viewController id="VRv-3k-H7v" sceneMemberID="viewController">
+                <viewController id="VRv-3k-H7v" customClass="ViewController" customModule="ezTouch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1vi-90-Nfc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,23 +53,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Fqw-kv-gJE">
-                                <rect key="frame" x="0.0" y="0.0" width="329" height="557"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BfF-kd-Yrp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="06e-yx-hfz">
-                                        <rect key="frame" x="0.0" y="0.0" width="329" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="06e-yx-hfz" id="alA-Cj-sWd">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="VRv-3k-H7v" id="Qfm-8N-bvx"/>
+                                    <outlet property="delegate" destination="VRv-3k-H7v" id="QPF-wS-64a"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="BfF-kd-Yrp" id="hkf-Z4-3Ih"/>
+                        <outlet property="view" destination="BfF-kd-Yrp" id="ISB-n5-umz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFO-Zl-2ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,6 +153,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="SqB-Br-TVY"/>
+        <segue reference="eZc-h1-t8b"/>
     </inferredMetricsTieBreakers>
 </document>
