@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,35 +14,66 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FPU-zI-1te" id="59Y-aR-02Q">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Feed-Item" translatesAutoresizingMaskIntoConstraints="NO" id="Kcp-J4-C2U">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Feed-Item" translatesAutoresizingMaskIntoConstraints="NO" id="Kcp-J4-C2U">
                         <rect key="frame" x="31" y="39" width="238" height="221"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="221" id="0or-Cz-7pF"/>
                             <constraint firstAttribute="width" constant="238" id="Deu-aJ-jbZ"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="macbook-pro" translatesAutoresizingMaskIntoConstraints="NO" id="seQ-IS-7TY">
-                        <rect key="frame" x="55" y="65" width="190" height="88"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="macbook-pro" translatesAutoresizingMaskIntoConstraints="NO" id="seQ-IS-7TY">
+                        <rect key="frame" x="55" y="60" width="190" height="88"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="88" id="7Yn-3G-2hm"/>
+                            <constraint firstAttribute="width" constant="190" id="Ndt-2c-Iij"/>
+                            <constraint firstAttribute="width" secondItem="seQ-IS-7TY" secondAttribute="height" multiplier="95:44" id="OAh-1d-hss"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noah’s Mac Book Pro - 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Toy-ue-wmj">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Noah’s Mac Book Pro - 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Toy-ue-wmj">
                         <rect key="frame" x="53" y="161" width="194" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Toy-ue-wmj" secondAttribute="height" multiplier="194:21" id="vgd-UA-Joq"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="unlockButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exi-oF-jLQ">
-                        <rect key="frame" x="55" y="190" width="56" height="64"/>
-                        <state key="normal" image="Touch2Unlock-Button">
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="unlockButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exi-oF-jLQ">
+                        <rect key="frame" x="53" y="190" width="43.5" height="54"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="Nwx-eJ-4fh"/>
+                            <constraint firstAttribute="height" constant="54" id="lIg-dm-clw"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="47.5" id="plK-Ho-nQH"/>
+                            <constraint firstAttribute="width" constant="47.5" id="rnu-CD-M9p"/>
+                        </constraints>
+                        <state key="normal" image="Touch-Button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="settingsButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVC-Ny-dhd">
-                        <rect key="frame" x="199" y="195" width="46" height="59"/>
+                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="settingsButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVC-Ny-dhd">
+                        <rect key="frame" x="199" y="195" width="38" height="49"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="KVC-Ny-dhd" secondAttribute="height" multiplier="38:49" id="SfV-dd-RuD"/>
+                            <constraint firstAttribute="width" constant="38" id="aPJ-u4-dZP"/>
+                            <constraint firstAttribute="height" constant="49" id="rgM-V5-JVN"/>
+                        </constraints>
                         <state key="normal" image="Settings-Button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerX" secondItem="Kcp-J4-C2U" secondAttribute="centerX" id="9fh-hS-swy"/>
+                    <constraint firstAttribute="centerY" secondItem="Kcp-J4-C2U" secondAttribute="centerY" constant="0.25" id="Ebh-XH-JeP"/>
+                    <constraint firstItem="Kcp-J4-C2U" firstAttribute="leading" secondItem="Exi-oF-jLQ" secondAttribute="trailing" constant="-80" id="IKS-YI-NXz"/>
+                    <constraint firstItem="Exi-oF-jLQ" firstAttribute="width" secondItem="KVC-Ny-dhd" secondAttribute="height" multiplier="56:59" id="ULv-cq-Rd1"/>
+                    <constraint firstItem="seQ-IS-7TY" firstAttribute="leading" secondItem="Kcp-J4-C2U" secondAttribute="trailing" constant="-214" id="XD4-Mq-OHO"/>
+                    <constraint firstItem="Exi-oF-jLQ" firstAttribute="top" secondItem="Kcp-J4-C2U" secondAttribute="bottom" constant="-70" id="Zvk-tF-bfD"/>
+                    <constraint firstItem="KVC-Ny-dhd" firstAttribute="leading" secondItem="Kcp-J4-C2U" secondAttribute="trailing" constant="-70" id="ktl-DS-6ro"/>
+                    <constraint firstItem="seQ-IS-7TY" firstAttribute="top" secondItem="59Y-aR-02Q" secondAttribute="topMargin" constant="57" id="r9i-dp-fst"/>
+                    <constraint firstItem="KVC-Ny-dhd" firstAttribute="top" secondItem="Kcp-J4-C2U" secondAttribute="bottom" constant="-65" id="rYG-8q-yFg"/>
+                    <constraint firstItem="Toy-ue-wmj" firstAttribute="leading" secondItem="Kcp-J4-C2U" secondAttribute="trailing" constant="-216" id="zum-Ki-9ov"/>
+                </constraints>
                 <userDefinedRuntimeAttributes>
                     <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                         <integer key="value" value="20"/>
@@ -53,13 +86,13 @@
                 <outlet property="settingButton" destination="KVC-Ny-dhd" id="GaF-Q0-Ie1"/>
                 <outlet property="touchButton" destination="Exi-oF-jLQ" id="Pn9-NG-Xj2"/>
             </connections>
-            <point key="canvasLocation" x="647.5" y="460.5"/>
+            <point key="canvasLocation" x="647" y="460"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="Feed-Item" width="434" height="434"/>
         <image name="Settings-Button" width="82" height="92"/>
-        <image name="Touch2Unlock-Button" width="88" height="109"/>
+        <image name="Touch-Button" width="65" height="84"/>
         <image name="macbook-pro" width="338" height="184"/>
     </resources>
 </document>
