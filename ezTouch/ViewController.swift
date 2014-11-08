@@ -14,6 +14,11 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet var touchButton:UIButton!
     @IBOutlet var settingButton:UIButton!
     
+    func loadItem(name: String){
+        nameLabel.text = name
+        
+        
+    }
     
 }
 
@@ -24,9 +29,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = 250
+        
+        var nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
+        
+        tableView.registerNib(nib, forCellReuseIdentifier: "customCell")
+        
+        self.tableView.rowHeight = 300
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "Background"))
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+       // self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     
@@ -35,12 +45,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
-        var mainCellView = UIView(frame: CGRectMake(100, 200, 250, 250))
-        cell.backgroundColor = UIColor(red:0.0, green:0.0,blue:0.0,alpha:0.1)// transparent color
-        cell.textLabel.text = self.items[indexPath.row]
+       
+        var cell:CustomTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("customCell") as CustomTableViewCell
+        // this is how you extract values from a tuple
+        //var (title, image) = items[indexPath.row]
+        var 🐻 = "Noah’s Mac Book Pro - 1"
         
+        cell.loadItem(🐻)
+        cell.backgroundColor = UIColor(red:0.0, green:0.0,blue:0.0,alpha:0.1)// transparent color
         return cell
+        
+        
+        
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
