@@ -16,9 +16,8 @@ class CustomTableViewCell: UITableViewCell {
     
     func loadItem(name: String){
         nameLabel.text = name
-        
-        
     }
+    
     
 }
 
@@ -57,8 +56,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.backgroundColor = UIColor(red:0.0, green:0.0,blue:0.0,alpha:0.1)// transparent color
         return cell
-        
-        
         
     }
     
