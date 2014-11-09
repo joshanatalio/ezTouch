@@ -39,7 +39,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="unlockButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exi-oF-jLQ">
-                        <rect key="frame" x="53" y="190" width="43.5" height="54"/>
+                        <rect key="frame" x="53" y="190" width="44" height="54"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="Nwx-eJ-4fh"/>
                             <constraint firstAttribute="height" constant="54" id="lIg-dm-clw"/>

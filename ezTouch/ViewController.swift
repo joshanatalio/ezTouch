@@ -35,6 +35,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.registerNib(nib, forCellReuseIdentifier: "customCell")
         
         self.tableView.rowHeight = 300
+        self.tableView.backgroundColor = UIColor(red:0.0, green:0.0,blue:0.0,alpha:0.1)
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "Background"))
        // self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
@@ -52,6 +54,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var 🐻 = "Noah’s Mac Book Pro - 1"
         
         cell.loadItem(🐻)
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.backgroundColor = UIColor(red:0.0, green:0.0,blue:0.0,alpha:0.1)// transparent color
         return cell
         
@@ -60,6 +63,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var cell:CustomTableViewCell = tableView.cellForRowAtIndexPath(indexPath) as CustomTableViewCell
+        cell.highlighted = false;
+        cell.backgroundColor = UIColor(red:0.0, green:0.0,blue:0.0,alpha:0.1)// transparent color
         println("You selected cell #\(indexPath.row)!")
     }
 }
